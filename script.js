@@ -180,7 +180,7 @@ function takeInput(input){
         operator = null;
         updateDisplay(number1);
     } else if (
-        clear.includes("allClear"))
+        clear.includes(input))
     {
         allClear();
     }
