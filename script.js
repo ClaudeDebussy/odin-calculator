@@ -115,7 +115,7 @@ function createEventListeners(){
 
 function takeInput(input){
     const numbersAsStrings = ["0","1","2","3","4","5","6","7","8","9"];
-    const operatorsAsStrings = ["divideBy", "times", "minus", "plus"];
+    const operatorsAsStrings = ["dividedBy", "times", "minus", "plus"];
     const equals = ["equals"];
     const clear = ["allClear"];
     if (
