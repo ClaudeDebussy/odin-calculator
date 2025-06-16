@@ -78,13 +78,13 @@ function createEventListeners(){
     nineButton.addEventListener("click", function() {
         takeInput("9");});
     
-    const delButton = document.getElementById("del");
-    delButton.addEventListener("click", function() {
-        takeInput("del");});
+    // const delButton = document.getElementById("del");
+    // delButton.addEventListener("click", function() {
+    //     takeInput("del");});
 
-    const pointButton = document.getElementById("point");
-    pointButton.addEventListener("click", function() {
-        takeInput("point");});
+    // const pointButton = document.getElementById("point");
+    // pointButton.addEventListener("click", function() {
+    //     takeInput("point");});
 
     const equalsButton = document.getElementById("equals");
     equalsButton.addEventListener("click", function() {
