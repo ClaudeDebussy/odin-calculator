@@ -146,7 +146,8 @@ function takeInput(input){
     } else if (
         numbersAsStrings.includes(input) &&
         operator != null &&
-        number1 != null)
+        number1 != null &&
+        number2 === null)
     {
         number2 = input;
         updateDisplay(number2)
@@ -156,7 +157,7 @@ function takeInput(input){
         number1 != null &&
         number2 != null)
     {
-        number2 += null;
+        number2 += input;
         updateDisplay(number2)
     } else if (
         operatorsAsStrings.includes(input) &&
@@ -166,7 +167,7 @@ function takeInput(input){
     {
         number1 = operate(operator,number1,number2);
         number2 = null;
-        operator = null;
+        // operator = null;
         updateDisplay(number1);
     } else if (
         equals.includes(input) &&
