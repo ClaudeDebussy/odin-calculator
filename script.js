@@ -1,6 +1,7 @@
 let number1 = null;
 let number2 = null;
 let operator = null;
+let pressedEquals = false;
 
 function add(a,b){
     return a + b;
@@ -23,13 +24,13 @@ function operate(operator, number1, number2){
     number2 = parseFloat(number2);
     switch(operator){
         case "plus":
-            return add(number1,number2);
+            return String(add(number1,number2));
         case "minus":
-            return subtract(number1,number2);
+            return String(subtract(number1,number2));
         case "times":
-            return multiply(number1,number2);
+            return String(multiply(number1,number2));
         case "dividedBy":
-            return divide(number1,number2);
+            return String(divide(number1,number2));
         default:
             console.log("Error in operate().");
     }
@@ -127,7 +128,8 @@ function takeInput(input){
     } else if (
         numbersAsStrings.includes(input) && 
         number1 != null &&
-        operator === null)
+        operator === null &&
+        pressedEquals === false)
     {
         number1 += input;
         updateDisplay(number1)
@@ -179,11 +181,22 @@ function takeInput(input){
         number2 = null;
         operator = null;
         updateDisplay(number1);
+        pressedEquals = true;
     } else if (
         clear.includes(input))
     {
         allClear();
-    }
+    } else if (
+        pressedEquals === true &&
+        number1 &&
+        !number2 &&
+        !operator)
+        {
+            allClear();
+            number1 = input;
+            updateDisplay(number1);
+            pressedEquals = false;
+        }
 
     function updateDisplay(input){
         if (input){
