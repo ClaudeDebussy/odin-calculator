@@ -187,6 +187,12 @@ function takeInput(input){
     {
         allClear();
     } else if (
+        equals.includes(input) &&
+        !number2 &&
+        !operator)
+    {
+        //do nothing
+    } else if (
         pressedEquals === true &&
         number1 &&
         !number2 &&
