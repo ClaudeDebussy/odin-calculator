@@ -167,7 +167,7 @@ function takeInput(input){
     {
         number1 = operate(operator,number1,number2);
         number2 = null;
-        // operator = null;
+        operator = input;
         updateDisplay(number1);
     } else if (
         equals.includes(input) &&
