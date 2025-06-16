@@ -19,17 +19,17 @@ function divide(a,b){
 }
 
 function operate(operator, number1, number2){
-    number1 = parseFloat(number1)
-    number2 = parseFloat(number2)
+    number1 = parseFloat(number1);
+    number2 = parseFloat(number2);
     switch(operator){
         case "plus":
-            return String(add(number1,number2));
+            return add(number1,number2).toFixed(6);
         case "minus":
-            return String(subtract(number1,number2));
+            return subtract(number1,number2).toFixed(6);
         case "times":
-            return String(multiply(number1,number2));
+            return multiply(number1,number2).toFixed(6);
         case "dividedBy":
-            return String(divide(number1,number2));
+            return divide(number1,number2).toFixed(6);
         default:
             console.log("Error in operate().");
     }
